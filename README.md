@@ -1,5 +1,7 @@
 # SMB Server for Node.js
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/adobe/node-smb-server.svg)](https://greenkeeper.io/)
+
 ## Overwiew
 
 **node-smb-server** is an open-source JavaScript implementation of the [SMB/CIFS][] file sharing protocol. 
