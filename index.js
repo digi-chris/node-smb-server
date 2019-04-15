@@ -13,6 +13,18 @@
 'use strict';
 
 var init = require('./lib/logging');
-init(null, function () {
-  require('./lib/server');
-});
+//init(null, function () {
+var smbServer = require('./lib/server');
+//});
+
+module.exports.Create = (config, success, error) => {
+  smbServer.Create(config, (server) => {
+      success(server);
+    },
+    (err) => {
+      console.log('Error starting:');
+      console.log(err);
+      error(err);
+    }
+  );
+};

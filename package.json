@@ -1,21 +1,29 @@
 {
-  "name": "node-smb-server",
-  "description": "A Pure JavaScript SMB Server Implementation",
-  "version": "0.10.37",
-  "keywords": [
-    "SMB",
-    "CIFS",
-    "Samba",
-    "NTLM",
-    "NetBIOS",
-    "File-Sharing",
-    "Share",
-    "Server"
-  ],
-  "main": "index.js",
-  "scripts": {
-    "start": "node ./index.js"
+  "_from": "git+https://git@github.com/digi-chris/node-smb-server.git",
+  "_id": "node-smb-server@0.10.37",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/node-smb-server",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://git@github.com/digi-chris/node-smb-server",
+    "rawSpec": "git+https://git@github.com/digi-chris/node-smb-server",
+    "saveSpec": "git+https://git@github.com/digi-chris/node-smb-server.git",
+    "fetchSpec": "https://git@github.com/digi-chris/node-smb-server.git",
+    "gitCommittish": null
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://git@github.com/digi-chris/node-smb-server.git#65eecd0727a188672f0165797976904aa38676dc",
+  "_spec": "git+https://git@github.com/digi-chris/node-smb-server",
+  "_where": "/home/pi/mydesk",
+  "bugs": {
+    "url": "https://github.com/adobe/node-smb-server/issues"
+  },
+  "bundleDependencies": false,
   "dependencies": {
     "async": "^1.4.2",
     "binary": "~0.3.0",
@@ -33,15 +41,31 @@
     "unorm": "^1.4.1",
     "winston": "^2.2.0"
   },
-  "license": "Apache-2.0",
+  "deprecated": false,
+  "description": "A Pure JavaScript SMB Server Implementation",
   "engines": {
     "node": ">= 0.10.0"
   },
+  "homepage": "https://github.com/adobe/node-smb-server#readme",
+  "keywords": [
+    "SMB",
+    "CIFS",
+    "Samba",
+    "NTLM",
+    "NetBIOS",
+    "File-Sharing",
+    "Share",
+    "Server"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "name": "node-smb-server",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adobe/node-smb-server.git"
+    "url": "git+https://github.com/adobe/node-smb-server.git"
   },
-  "bugs": {
-    "url": "https://github.com/adobe/node-smb-server/issues"
-  }
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "version": "0.10.37"
 }
