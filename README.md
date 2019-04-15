@@ -1,5 +1,35 @@
 # SMB Server for Node.js
 
+## Forked version
+
+The original version of **node-smb-server** runs great as a standalone SMB
+server, using a config.json file to initialize its settings.
+
+I wanted a version of the SMB server where I could hook into events and set
+up my configuration programmatically, essentially separating the config from
+the underlying SMB logic.
+
+This repo is designed to give me that functionality.
+
+The main changes in this version from **node-smb-server** is that when you
+add a reference to the server via ``requre``, node-smb-server no longer instantly
+runs. Instead, you have to start the server in the following way:
+
+`
+var configText = fs.readFileSync('config.json').toString();
+var config = JSON.parse(configText);
+smb.Create(config, (server) => {
+  console.log("SMB Server Started.");
+}, (error) => {
+  console.error(error);
+});
+`
+
+There's a bit more to it than this - you can add a share after initialization
+as well. I'll add examples for this once I've formalized the correct way
+forward, as I'm probably going to alter these callbacks into promises.
+
+
 ## Overwiew
 
 **node-smb-server** is an open-source JavaScript implementation of the [SMB/CIFS](https://en.wikipedia.org/wiki/Server_Message_Block#SMB_/_CIFS_/_SMB1) file sharing protocol.
